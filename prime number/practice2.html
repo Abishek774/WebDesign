@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>prime num practice - between two nums</h1>
+    <script>
+
+        var n = parseInt(prompt("Enter a starting number"));
+        var y = parseInt(prompt("Enter a ending number"));
+
+       
+        for(var i=n; i<=y; i++){
+            var f = 0;
+
+            for(j=2; j<i; j++){
+
+                if (i%j == 0){
+
+                    document.write(i + " Not a prime number<br>");
+
+                    f = 1;
+                    break;
+
+                }
+            }
+            if (f == 0) {
+        document.write(i + " prime number<br>");
+    }
+}
+
+
+
+    </script>
+</body>
+</html>
