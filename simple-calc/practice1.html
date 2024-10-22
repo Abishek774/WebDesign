@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <div>
+        <input type="number" id="num_1" name="num_1" placeholder="Enter a number">
+        <input type="number" id="num_2" name="num_2" placeholder="Enter a number">
+        <button onclick="addNumber()">+</button>
+        <button onclick="subNumber()">-</button>
+        <button onclick="multiNumber()">*</button>
+        <button onclick="divNumber()">/</button>
+        <p id="ans"></p>
+    </div>
+
+    <script>
+        function addNumber() {
+            var x = parseFloat(document.getElementById('num_1').value);
+            var y = parseFloat(document.getElementById('num_2').value);
+            var z = x + y;
+            document.getElementById('ans').innerHTML = z;
+        }
+
+        function subNumber() {
+            var x = parseFloat(document.getElementById('num_1').value);
+            var y = parseFloat(document.getElementById('num_2').value);
+            var z = x - y;
+            document.getElementById('ans').innerHTML = z;
+        }
+
+        function multiNumber() {
+            var x = parseFloat(document.getElementById('num_1').value);
+            var y = parseFloat(document.getElementById('num_2').value);
+            var z = x * y;
+            document.getElementById('ans').innerHTML = z;
+        }
+
+        function divNumber() {
+            var x = parseFloat(document.getElementById('num_1').value);
+            var y = parseFloat(document.getElementById('num_2').value);
+            if (y !== 0) {
+                var z = x / y;
+                document.getElementById('ans').innerHTML = z;
+            } else {
+                document.getElementById('ans').innerHTML = "Cannot divide by zero";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
